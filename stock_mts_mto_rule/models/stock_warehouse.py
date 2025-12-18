@@ -58,8 +58,6 @@ class StockWarehouse(models.Model):
                         "route_id": self._find_or_create_global_route(
                             "stock_mts_mto_rule.route_mto_mts",
                             self.env._("Make To Order + Make To Stock"),
-                            create=False,  # ignored when raise_if_not_found enabled
-                            raise_if_not_found=True,
                         ).id,
                     },
                     "update_values": {
